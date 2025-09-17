@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Surprise!</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="envelope-container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">A letter for you...</div>
+                </div>
+            </div>
+            <div class="hello-kitty">
+                <img src="https://i.ibb.co/dG7p5hV/hello-kitty-peek.png" alt="Hello Kitty">
+            </div>
+            <div class="hearts">
+                <div class="heart h1"></div><div class="heart h2"></div><div class="heart h3"></div>
+            </div>
+        </div>
+        <button id="open-btn">✨ Click to open ✨</button>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <header>
+            <h1>Heyy, Bhavya!</h1>
+            <p>See what I have made for youu</p>
+        </header>
+
+        <section class="card">
+            <button id="read-letter-btn">
+                <img src="https://i.ibb.co/C0W2Xvj/mail-icon.png" alt="Mail Icon">
+                <h2>Read My Letter</h2>
+                <p>Click to see your special letter</p>
+            </button>
+        </section>
+
+        <section class="card">
+            <h2>Some Special Moments</h2>
+            <p>Swipe to see more ✨</p>
+            <div class="swiper-container" id="gallery-swiper">
+                <div class="swiper-wrapper">
+                    </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Little Notes From My Heart ❤️</h2>
+            <div class="notes-grid">
+                </div>
+            <p class="note-instruction">Click on any note to see the love behind it! ✨</p>
+        </section>
+
+        <section class="card">
+            <h2>Playlist For You 🎵</h2>
+            <p>Songs dedicated to u</p>
+            <div class="swiper-container" id="playlist-swiper">
+                <div class="swiper-wrapper">
+                    </div>
+            </div>
+            <audio id="audio-player"></audio>
+        </section>
+
+        <section class="card">
+             <button id="play-game-btn">
+                <img src="https://i.ibb.co/Wv5p02p/heart-icon.png" alt="Heart Icon">
+                <h2>Play a Game!</h2>
+                <p>Catch some hearts to unlock a special message</p>
+            </button>
+        </section>
+    </main>
+
+    <div id="letter-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-btn" id="close-letter-btn">&times;</button>
+            <div id="letter-content"></div>
+        </div>
+    </div>
+
+    <div id="game-modal" class="modal hidden">
+        <div class="modal-content" id="game-intro">
+            <button class="close-btn" id="close-game-btn">&times;</button>
+            <h2>Catch Hearts & Hello Kitty!</h2>
+            <p>Catch 15 hearts before time runs out! Look out for Hello Kitty for special bonuses!</p>
+            <button id="start-game-btn">Start Game</button>
+        </div>
+        <div class="modal-content hidden" id="game-area-wrapper">
+             <div class="game-stats">
+                <span>Score: <span id="score">0</span>/15</span>
+                <span>Time: <span id="time">30</span>s</span>
+            </div>
+            <div id="game-area"></div>
+        </div>
+         <div class="modal-content hidden" id="game-complete">
+            <button class="close-btn" id="end-game-btn">&times;</button>
+            <h2>Game Complete!</h2>
+            <p id="game-result-message"></p>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
